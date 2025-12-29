@@ -1,11 +1,16 @@
 "use client";
 
 import React from "react";
+import { Provider } from "react-redux";
+import { store } from "../../store/store";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="flex h-screen">
-            <main className="bg-slate-50 flex-1 overflow-auto">{children}</main>
+            <Provider store={store}>
+                {/* <SideMenu /> */}
+                <main className="bg-slate-50 flex-1 overflow-auto">{children}</main>
+            </Provider>
         </div>
     );
 }
