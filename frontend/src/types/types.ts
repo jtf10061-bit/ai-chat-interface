@@ -1,4 +1,4 @@
-export type Messagetype = {
-    message: string;
-    isMan: boolean;
-}
+export type MessageType = {
+  message: string;
+  isMan: boolean;
+};
